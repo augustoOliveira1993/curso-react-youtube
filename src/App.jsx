@@ -6,6 +6,7 @@ import {Contact} from "./pages/Contact.jsx";
 import {NewProject} from "./pages/NewProject.jsx";
 import {NavBar} from "./components/layouts/NavBar.jsx";
 import {Container} from "./components/layouts/Container.jsx";
+import {Projects} from "./pages/Projects.jsx";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
             <Container customClass="min-height">
                 <Routes>
                     <Route path="/" element={<Home/>}/>
+                    <Route path="/projects" element={<Projects/>}/>
                     <Route path="/company" element={<Company/>}/>
                     <Route path="/contact" element={<Contact/>}/>
                     <Route path="/newProject" element={<NewProject/>}/>

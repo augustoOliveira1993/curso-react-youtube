@@ -10,6 +10,7 @@ export const Footer = () => {
                     <li><FaInstagram /></li>
                     <li><FaLinkedin /></li>
                 </ul>
+                <p className={styles.copyRight}><span>Costs</span> &copy; 2023</p>
             </footer>
         </>
     );
