@@ -1,9 +1,17 @@
+import styles from './Home.module.css'
+import savings from '../assets/savings.svg'
+import {LinkButton} from "../components/LinkButton.jsx";
 export const Home = () => {
     return (
-        <>
-            <h1>Home</h1>
-            <p>Conteudo da pagina Home</p>
-        </>
+        <section className={styles.homeContainer}>
+            <h1>Bem-vindo ao <span>Costs</span></h1>
+            <p>Começe a gerenciar os seus projetos agora mesmo!</p>
+            <LinkButton
+                to="/newProject"
+                text="Criar projeto"
+            />
+            <img src={savings} alt=""/>
+        </section>
     );
 };
 
