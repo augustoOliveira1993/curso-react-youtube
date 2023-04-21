@@ -5,17 +5,18 @@ export const Select = ({ text, name, options, handleOnChange, value}) => {
         <div className={styles.formControl}>
             <label htmlFor={name}>{text}:</label>
             <select
-                id={name}
                 name={name}
+                id={name}
+                onChange={handleOnChange}
+                value={value || ''}
             >
-                <option disabled selected>Selecione uma opção</option>
-                {options.map((option) => (
-                    <option key={option.id} value={option.id}>
-                        {option.name}
+                <option>Selecione uma opção</option>
+                {options.map((options) => (
+                    <option value={options.id} key={options.id}>
+                        {options.name}
                     </option>
                 ))}
             </select>
-
         </div>
     );
 };

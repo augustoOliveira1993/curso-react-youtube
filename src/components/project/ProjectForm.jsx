@@ -1,9 +1,26 @@
+import {useEffect, useState} from "react";
+
 import styles from './ProjectForm.module.css'
 import {Input} from "../form/Input.jsx";
 import {Select} from "../form/Select.jsx";
 import {SubmitButton} from "../form/SubmitButton.jsx";
 
 export const ProjectForm = ({btnText}) => {
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+        fetch('http://localhost:5000/categories', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                setCategories(data)
+            })
+
+    }, [])
     const handleNewProject = (event) => {
         event.preventDefault()
     }
@@ -34,12 +51,7 @@ export const ProjectForm = ({btnText}) => {
                 placeholder="Insira o orçamento total"
                 handleOnChange={() => {
                 }}
-                options={[
-                    {id: 1, name: 'Empresa 1'},
-                    {id: 2, name: 'Empresa 2'},
-                    {id: 3, name: 'Empresa 3'},
-                    {id: 4, name: 'Empresa 4'},
-                ]}
+                options={categories}
             />
             <SubmitButton text={btnText}/>
         </form>
