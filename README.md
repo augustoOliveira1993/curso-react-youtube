@@ -1,3 +1,3 @@
 # Curso de React do Youtube
 
-## Aulas Teoricas
+## Projeto Costs - Gerenciador de Projetos
