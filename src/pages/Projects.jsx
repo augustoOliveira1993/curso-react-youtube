@@ -15,7 +15,7 @@ export const Projects = () => {
     }
     const [projects, setProjects] = useState([]);
     const [removeLoading, setRemoveLoading] = useState(false);
-
+    const [projectMessage, setProjectMessage] = useState('');
     const handleRemove = (id) => {
         fetch(`http://localhost:5000/projects/${id}`, {
             method: 'DELETE',
@@ -26,10 +26,10 @@ export const Projects = () => {
             .then((response) => response.json())
             .then((data) => {
                 setProjects(projects.filter((project) => project.id !== id));
-
+                setProjectMessage('Projeto removido com sucesso!')
             }).catch((error) => {
-            console.error('Error:', error);
-        })
+                setProjectMessage('Erro ao remover projeto!')
+            })
     }
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -61,6 +61,7 @@ export const Projects = () => {
                 <LinkButton to="/newproject" text="Criar Projeto"/>
             </div>
             {message && <Messagem msg={message} type={location.state?.type}/>}
+            {projectMessage && <Messagem msg={projectMessage} type="success"/>}
             <Container customClass="start">
                 {projects.length > 0 && projects.map((project) => (
                     <ProjectCard
@@ -73,7 +74,8 @@ export const Projects = () => {
                     />
                 ))}
                 {!removeLoading && <Loading/>}
-                {removeLoading && projects.length === 0 &&  <p className={styles.projectCardEmpty}>Nenhum projeto encontrado...</p>}
+                {removeLoading && projects.length === 0 &&
+                    <p className={styles.projectCardEmpty}>Nenhum projeto encontrado...</p>}
             </Container>
         </div>
     );
