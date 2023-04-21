@@ -1,0 +1,23 @@
+.list {
+    display: flex;
+    list-style: none;
+    background-color: black;
+    padding: 15px;
+}
+
+.item {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.item a:hover {
+    background-color: rgba(100, 108, 255, 0.32);
+    color: white;
+}
+
+.item a {
+    color: white;
+    text-decoration: none;
+}
+
