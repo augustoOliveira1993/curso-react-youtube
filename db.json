@@ -2,24 +2,134 @@
   "projects": [
     {
       "name": "Projeto Teste",
-      "budget": "20000",
+      "budget": "450000",
       "category": {
         "id": "2",
         "name": "Desenvolvimento"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 5500,
+      "services": [
+        {
+          "name": "Dev em PHP",
+          "cost": "500",
+          "description": "implementar o envio de email",
+          "id": "89cc41f3-604e-48bb-9938-2810272afdc9"
+        },
+        {
+          "name": "DEV front end",
+          "cost": "5000",
+          "description": "2sds",
+          "id": "c40c2832-5159-40a6-b452-c3d1f83e3d6b"
+        }
+      ],
       "id": 1
     },
     {
       "name": "Projeto 1",
-      "budget": "600000",
+      "budget": "3000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "3",
+        "name": "Design"
       },
-      "cost": 0,
-      "services": [],
+      "cost": 2993,
+      "services": [
+        {
+          "name": "Chamado por email",
+          "cost": "200",
+          "description": "adkoakodkaoskd",
+          "id": "76248d95-55ad-4af3-a62e-6a01e2c682b8"
+        },
+        {
+          "name": "Chamado por email",
+          "cost": "200",
+          "description": "adkoakodkaoskd",
+          "id": "0649c163-96aa-4615-86fb-ff4d44671852"
+        },
+        {
+          "name": "Chamado por email",
+          "cost": "200",
+          "description": "adkoakodkaoskd",
+          "id": "e2cfde73-daea-4f09-b8e0-fd5ab4709ce9"
+        },
+        {
+          "name": "Grupo dev",
+          "cost": "122",
+          "id": "ed30208f-cd4b-43e7-8f02-d50ccdbffdd1",
+          "description": "adkoakodkaoskd"
+        },
+        {
+          "name": "Grupo dev",
+          "cost": "122",
+          "id": "bf69a78f-46db-4e32-9221-0db824d6ef08",
+          "description": "adkoakodkaoskd"
+        },
+        {
+          "cost": "222",
+          "id": "d92439cd-0e53-4fbe-8e87-102fcb335f1a",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "222",
+          "id": "3c0c7ffb-5bbc-4bbe-8e38-f481762396f9",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "222",
+          "id": "510e70b7-fd4c-4983-b3f9-b14a572d393e",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "222",
+          "id": "510e70b7-fd4c-4983-b3f9-b14a572d393e",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "222",
+          "id": "c6122f43-a676-4507-9670-37f566c806e5",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "233",
+          "id": "c20cda1d-81c4-4d0e-a98d-aa175a81e1b7",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "4",
+          "id": "10e7ff52-68c5-498a-a240-5f12243907d8",
+          "name": "teste",
+          "description": "sdsd"
+        },
+        {
+          "cost": "400",
+          "id": "0e44e201-0d20-4cf7-9f7f-56d3914d34e0",
+          "name": "teste",
+          "description": "sdsd0"
+        },
+        {
+          "cost": "400",
+          "id": "54c4b299-6612-47df-88ae-dd81bec3d3e8",
+          "name": "teste",
+          "description": "sdsd0"
+        },
+        {
+          "name": "Chamado por email",
+          "cost": "1",
+          "description": "sdsd",
+          "id": "27c78c09-b545-49fe-87e7-184aefb4bf68"
+        },
+        {
+          "name": "Chamado por email",
+          "cost": "1",
+          "description": "sdsd",
+          "id": "726601f8-7031-4a5c-88aa-054804de1140"
+        }
+      ],
       "id": 2
     },
     {
@@ -37,8 +147,8 @@
       "name": "Projeto 15",
       "budget": "180000",
       "category": {
-        "id": "3",
-        "name": "Design"
+        "id": "2",
+        "name": "Desenvolvimento"
       },
       "cost": 0,
       "services": [],
