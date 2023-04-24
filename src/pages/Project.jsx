@@ -83,7 +83,33 @@ export const Project = () => {
         }
     }, [id])
 
-    const removeService = async (serviceId) => {
+    const removeService = async (id, cost) => {
+        const servicesUpdate = project.services.filter((service) => service.id !== id);
+
+        const projectUpdated = project
+
+        projectUpdated.services = servicesUpdate
+        projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+        await fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+            method: 'PATCH',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(projectUpdated)
+        })
+            .then((response) => response.json())
+            .then((data) => {
+                setProject(projectUpdated);
+                setService(servicesUpdate)
+                setMessage('Serviço removido com sucesso');
+                setTypeMessage('success');
+            })
+            .catch((error) => {
+                setMessage('Erro ao remover serviço');
+                setTypeMessage('erro');
+                console.error('Error:', error);
+            })
 
     }
     const toggleProjectForm = () => {
